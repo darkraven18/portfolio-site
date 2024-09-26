@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/darkraven18/portfolio-site/static/css/main.5767b0b0.css",
+    "main.js": "/darkraven18/portfolio-site/static/js/main.ba9f066c.js",
+    "static/media/logo.svg": "/darkraven18/portfolio-site/static/media/logo.4227b93d27d63687c304e529bc470b2f.svg",
+    "index.html": "/darkraven18/portfolio-site/index.html",
+    "main.5767b0b0.css.map": "/darkraven18/portfolio-site/static/css/main.5767b0b0.css.map",
+    "main.ba9f066c.js.map": "/darkraven18/portfolio-site/static/js/main.ba9f066c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5767b0b0.css",
+    "static/js/main.ba9f066c.js"
+  ]
+}
