@@ -1,35 +1,35 @@
-name: CI
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - master
-  pull_request:
-    branches:
-      - master
+      - master  # Change this to your default branch
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out code
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '20' # Change this to your preferred Node.js version
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'  # Specify your Node.js version
 
-    - name: Configure Git
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the project
+        run: npm run build
+
+      - name: Configure Git
         run: |
-          git config --global user.name "darkraven18"
-          git config --global user.email "ravi.ujjwal18@gmail.com"
+          git config --global user.name "Your Name"
+          git config --global user.email "you@example.com"
 
-    - name: Install dependencies
-      run: npm install
-
-    - name: Deploy to GitHub Pages
-      run: npm run deploy
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Deploy to GitHub Pages
+        run: npm run deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub token for authentication
