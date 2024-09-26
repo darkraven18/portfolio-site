@@ -21,6 +21,11 @@ jobs:
       with:
         node-version: '20' # Change this to your preferred Node.js version
 
+    - name: Configure Git
+        run: |
+          git config --global user.name "darkraven18"
+          git config --global user.email "ravi.ujjwal18@gmail.com"
+
     - name: Install dependencies
       run: npm install
 
