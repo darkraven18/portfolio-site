@@ -1,34 +1,27 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 10s linear;
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid white; /* Cursor effect */
+    animation: typing 1s steps(2, end), blink-caret 0.75s step-end infinite;
   }
-}
 
-.App-header {
-  background-color: black;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 3vmin);
-  color: rgb(34, 2, 62);
-}
+  .typewriter2{
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid white; /* Cursor effect */
+    animation: typing 2s steps(11, end), blink-caret 0.75s step-end infinite;
+  }
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { 
+      border-color: white; 
+      font-style: italic; /* Italic font for the cursor */
+    }
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
