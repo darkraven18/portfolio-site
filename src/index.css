@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+html {
+    transition: all 1s ease; /* Smoothly transition all properties, including background and text color */
+  }
+  
