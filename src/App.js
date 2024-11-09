@@ -53,10 +53,11 @@ function App() {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
   useEffect(() => {
-    const phrases = ["Software Developer", "Web Enthusiast", "Creative Coder"];
+    const phrases = ["Software Developer", "Full Stack Developer", "Creative Coder"];
     const word=phrases[index%3];
     async function typeWord(){
     let curr="";
+    await delay(500);
     for(const char of word){
       curr=curr+char;
       setCurrentText(curr);
@@ -79,16 +80,16 @@ function App() {
   return (
     <div className="flex flex-col justify-start items-center min-h-screen bg-black dark:bg-white overflow-x-hidden">
       <div className='basis-[120px] w-full flex flex-row'>
-        <div className='cursor-default font-reenie flex text-green text-8xl font-mono items-center justify-start basis-1/2 pr-4 pl-8 hover:scale-105 transition duration-600 ease-in-out'>
+        <div className='cursor-default font-reenie flex text-green text-8xl font-mono items-center justify-start basis-1/2 pr-4 pl-[12%] md:pl-[10%] hover:scale-105 transition duration-600 ease-in-out'>
           &lt;Ujjwal/&gt;
         </div>
         {isMobile ? (
-          <div data-id="zoomed-button" className='flex text-green flex-row justify-end items-center pr-4 pl-1 basis-1/2'>
+          <div data-id="zoomed-button" className='flex text-green flex-row justify-end items-center pr-[15%] md:pr-[20%] pl-1 basis-1/2'>
             <Bars3Icon className="opacity-75 cursor-pointer hover:opacity-100 hover:scale-110 transition-colors duration-600 ease-in-out h-6 w-6" onClick={toggleMenu} />
           </div>
 
         ) : (
-          <div className='flex text-3xl text-green flex-row justify-end items-center gap-6 pr-4 pl-4 basis-1/2'>
+          <div className='flex text-3xl text-green flex-row justify-end items-center gap-6 pr-[5%] pl-4 basis-1/2'>
             <div className='cursor-pointer opacity-75 hover:opacity-100 hover:underline underline-offset-4 decoration-white hover:scale-110 transition duration-600 ease-in-out'><b>About</b></div>
             <div className='cursor-pointer opacity-75 hover:opacity-100 hover:underline underline-offset-4 decoration-white hover:scale-110 transition duration-600 ease-in-out'><b>Skills</b></div>
             <div className='cursor-pointer opacity-75 hover:opacity-100 hover:underline underline-offset-4 decoration-white hover:scale-110 transition duration-600 ease-in-out'><b>Work</b></div>
@@ -126,15 +127,15 @@ function App() {
           </div>
         </div>
       )}
-      <div className='flex text-green flex-row justify-start items-center w-full h-screen-minus-120'>
-        <div className='text-4xl text-white dark:text-black font-serif basis-2/6 h-full pl-4 flex flex-col justify-center items-center'>
-          <div className='min-w-[30rem] leading-loose'>Hey, I'm <p className='text-green text-5xl font-crimson'> Ujjwal Ravi</p>
-            I'm a <span className="text-green text-5xl font-crimson">{currentText}</span>
-            <span className="text-green text-5xl font-crimson">|</span>
+      <div className='flex text-green flex-col md:flex-row pl-[80%] md:pl-[0%] justify-start items-center w-full h-screen-minus-120 overflow-y-clip'>
+        <div className='text-3xl md:text-5xl text-white dark:text-black font-serif basis-3/6 h-full flex flex-col justify-center items-center'>
+          <div className='min-w-[50rem] leading-loose pl-[5%] md:pl-[18%]'>Hey, I'm <p className='text-green text-4xl md:text-6xl font-crimson'> Ujjwal Ravi</p>
+            I'm a <span className="text-green text-4xl md:text-6xl font-crimson">{currentText}</span>
+            <span className="text-green text-6xl font-crimson">|</span>
           </div>
         </div>
-        <div className='flex justify-left items-center basis-3/6 h-full'>
-          <img style={{height:"30rem",width:"30rem"}} src="profile.png" alt="ME!" />
+        <div className='flex justify-center items-center basis-2/6 h-full'>
+          <img className="w-24 h-24 md:w-80 md:h-80" src="profile.png" alt="ME!" />
         </div>
         <div className='absolute right-0 top-20 flex text-white dark:text-black opacity-5 hover:opacity-20 flex-row justify-end items-start text-[10rem] basis-1/6 h-full inline-block overflow-x-clip'>
           <span className='-z-50 right-0 font-bold inline-block mr-[-4.5rem] mt-4' style={{ writingMode: "vertical-lr", textOrientation: "sideways" }}>UDEV</span>
