@@ -1,48 +1,70 @@
 .typewriter {
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 2px solid white;
-    animation: typing 1s steps(2, end), blink-caret 0.75s step-end infinite;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid white;
+  animation: typing 1s steps(2, end), blink-caret 0.75s step-end infinite;
+}
+
+.typewriter2 {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid white;
+  animation: typing 2s steps(5, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
   }
 
-  .typewriter2{
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 2px solid white;
-    animation: typing 2s steps(5, end), blink-caret 0.75s step-end infinite;
+  to {
+    width: 100%;
   }
-  @keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent;
   }
 
-  @keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { 
-      border-color: white;
-    }
+  50% {
+    border-color: white;
   }
-  html::-webkit-scrollbar {
-    width: 5px;               /* Width of the vertical scrollbar */
-    height: 5px;              /* Height of the horizontal scrollbar */
-  }
-  
-  html::-webkit-scrollbar-track {
-    background: #f3f4f6;
-    color:#39DFAA       /* Track color */
-  }
-  
-  html::-webkit-scrollbar-thumb {
-    background-color: #3e9f80;
-    opacity: 75; /* Scrollbar handle color */
-  }
-  
-  html::-webkit-scrollbar-thumb:hover {
-    opacity: 100;
-    background-color: #39DFAA; /* Handle color on hover */
-  }
-  .h-screen-minus-120 {
-    @apply h-[calc(100vh-120px)];
-  }
+}
+
+html::-webkit-scrollbar {
+  width: 5px;
+  /* Width of the vertical scrollbar */
+  height: 5px;
+  /* Height of the horizontal scrollbar */
+}
+
+html::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  color: #39DFAA
+    /* Track color */
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #3e9f80;
+  opacity: 75;
+  /* Scrollbar handle color */
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  opacity: 100;
+  background-color: #39DFAA;
+  /* Handle color on hover */
+}
+
+.h-screen-minus-120 {
+  @apply h-[calc(100vh-120px)];
+}
+
+html {
+  scroll-behavior: smooth;
+}
