@@ -2,16 +2,16 @@ import React from 'react';
 import MenuOptions from './MenuOptions';
 import ToggleTheme from './ToggleTheme';
 
-function MobileMenu({ isDarkMode, toggleTheme }) {
+function MobileMenu({ toggleMenu, isDarkMode, toggleTheme }) {
     return (
-        <div className="text-4xl fixed bg-black text-green z-20 h-[100vh] bg-opacity-75 w-full">
+        <div className="text-4xl fixed bg-black dark:bg-white text-green z-20 h-[100vh] dark:bg-opacity-75 bg-opacity-75 w-full">
             <div className='flex flex-col mt-[140px] gap-8 justify-center items-center flex-grow'>
-                <MenuOptions option="About" />
-                <MenuOptions option="Skills" />
-                <MenuOptions option="Work" />
-                <MenuOptions option="Contact" />
-                <MenuOptions option="Resume" />
-                <ToggleTheme isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+                <MenuOptions toggleMenu={toggleMenu}  option="About" />
+                <MenuOptions toggleMenu={toggleMenu} option="Skills" />
+                <MenuOptions toggleMenu={toggleMenu} option="Work" />
+                <MenuOptions toggleMenu={toggleMenu} option="Contact" />
+                <MenuOptions toggleMenu={toggleMenu} option="Resume" />
+                <ToggleTheme toggleMenu={toggleMenu} isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
             </div>
         </div>
     );

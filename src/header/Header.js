@@ -46,7 +46,7 @@ function Header() {
     }, [])
 
     return (
-        <div className='basis-[120px] w-full flex flex-row'>
+        <div className='fixed z-50 bg-black/95 dark:bg-white/95 basis-[120px] w-full flex flex-row'>
             <Logo />
             {isMobile ? (
                 <MenuButton toggleMenu={toggleMenu} isMenuOpen={isMenuOpen}/>
@@ -57,7 +57,7 @@ function Header() {
                 </div>
             )}
             {isMenuOpen && (
-                <MobileMenu isDarkMode={isDarkMode} toggleTheme={toggleTheme}/>
+                <MobileMenu toggleMenu={toggleMenu} isDarkMode={isDarkMode} toggleTheme={toggleTheme}/>
             )}
         </div>
     );
