@@ -3,6 +3,8 @@ import React from 'react';
 import About from './about/About';
 import Skills from './skills/Skills';
 import Homepage from './homepage/Homepage';
+import Contact from './contact/Contact';
+import 'devicon/devicon.min.css';
 
 function App() {
  return (
@@ -10,6 +12,7 @@ function App() {
       <Homepage />
       <About/>
       <Skills/>
+      <Contact/>
     </div>
   );
 }

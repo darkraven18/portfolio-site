@@ -8,7 +8,7 @@ function Skills() {
         <div id="skills" className='flex justify-center items-center relative w-full h-screen'>
             <Heading/>
             <SkillSets/>
-            <DownwardsArrow target="#home"/>
+            <DownwardsArrow target="#contact"/>
         </div>
     );
 }
