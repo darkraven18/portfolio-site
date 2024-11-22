@@ -19,9 +19,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build --user \"darkraven18 <ujjwal.rishu18@gmail.com>\" --repo https://x-access-token:${GITHUB_TOKEN}@github.com/darkraven18/portfolio-site.git"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
